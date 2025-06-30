@@ -1,0 +1,361 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Psychedelic animations and effects */
+@layer utilities {
+  .text-shadow-psychedelic {
+    text-shadow: 
+      0 0 5px #ff00ff, 
+      0 0 10px #00ffff, 
+      0 0 15px #ffff00, 
+      0 0 20px #ff00ff;
+  }
+  
+  .animate-psychedelic-bg {
+    background-size: 400% 400%;
+    animation: psychedelic-bg 10s ease infinite;
+  }
+  
+  @keyframes psychedelic-bg {
+    0% { background-position: 0% 0% }
+    25% { background-position: 100% 0% }
+    50% { background-position: 100% 100% }
+    75% { background-position: 0% 100% }
+    100% { background-position: 0% 0% }
+  }
+  
+  /* Trippy glass morphism */
+  .trippy-glass {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px) hue-rotate(45deg);
+    -webkit-backdrop-filter: blur(8px) hue-rotate(45deg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: hue-rotate 10s linear infinite;
+  }
+  
+  /* Intense neon glow effects */
+  .neon-psychedelic {
+    box-shadow: 
+      0 0 5px #ff00ff, 
+      0 0 10px #00ffff, 
+      0 0 15px #ffff00, 
+      0 0 20px #ff00ff;
+    animation: neon-flicker 2s linear infinite;
+  }
+  
+  @keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      box-shadow: 
+        0 0 5px #ff00ff, 
+        0 0 10px #00ffff, 
+        0 0 15px #ffff00, 
+        0 0 20px #ff00ff;
+    }
+    20%, 24%, 55% {
+      box-shadow: none;
+    }
+  }
+  
+  /* Fractal pattern animation */
+  .fractal-pattern {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fractal-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      #ff00ff, #00ffff, #ffff00, #ff00ff
+    );
+    opacity: 0.2;
+    animation: fractal-spin 30s linear infinite;
+  }
+  
+  @keyframes fractal-spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  
+  /* Kaleidoscope effect */
+  .kaleidoscope {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .kaleidoscope::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff0000
+    );
+    opacity: 0.2;
+    animation: kaleidoscope-spin 20s linear infinite;
+  }
+  
+  @keyframes kaleidoscope-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Liquid morphing effect */
+  .liquid-morph {
+    animation: morph 8s ease infinite;
+  }
+  
+  /* Glitch text effect */
+  .glitch-text {
+    position: relative;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00ff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+  
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 #00ffff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-anim {
+    0% { clip: rect(42px, 9999px, 44px, 0); }
+    5% { clip: rect(12px, 9999px, 59px, 0); }
+    10% { clip: rect(48px, 9999px, 29px, 0); }
+    15% { clip: rect(42px, 9999px, 73px, 0); }
+    20% { clip: rect(63px, 9999px, 27px, 0); }
+    25% { clip: rect(34px, 9999px, 55px, 0); }
+    30% { clip: rect(86px, 9999px, 73px, 0); }
+    35% { clip: rect(20px, 9999px, 20px, 0); }
+    40% { clip: rect(26px, 9999px, 60px, 0); }
+    45% { clip: rect(25px, 9999px, 66px, 0); }
+    50% { clip: rect(57px, 9999px, 98px, 0); }
+    55% { clip: rect(5px, 9999px, 46px, 0); }
+    60% { clip: rect(82px, 9999px, 31px, 0); }
+    65% { clip: rect(54px, 9999px, 27px, 0); }
+    70% { clip: rect(28px, 9999px, 99px, 0); }
+    75% { clip: rect(45px, 9999px, 69px, 0); }
+    80% { clip: rect(23px, 9999px, 85px, 0); }
+    85% { clip: rect(54px, 9999px, 84px, 0); }
+    90% { clip: rect(45px, 9999px, 47px, 0); }
+    95% { clip: rect(37px, 9999px, 20px, 0); }
+    100% { clip: rect(4px, 9999px, 91px, 0); }
+  }
+  
+  @keyframes glitch-anim2 {
+    0% { clip: rect(65px, 9999px, 119px, 0); }
+    5% { clip: rect(52px, 9999px, 115px, 0); }
+    10% { clip: rect(79px, 9999px, 71px, 0); }
+    15% { clip: rect(94px, 9999px, 53px, 0); }
+    20% { clip: rect(29px, 9999px, 44px, 0); }
+    25% { clip: rect(86px, 9999px, 59px, 0); }
+    30% { clip: rect(42px, 9999px, 47px, 0); }
+    35% { clip: rect(92px, 9999px, 119px, 0); }
+    40% { clip: rect(60px, 9999px, 47px, 0); }
+    45% { clip: rect(69px, 9999px, 53px, 0); }
+    50% { clip: rect(6px, 9999px, 46px, 0); }
+    55% { clip: rect(13px, 9999px, 76px, 0); }
+    60% { clip: rect(8px, 9999px, 13px, 0); }
+    65% { clip: rect(15px, 9999px, 28px, 0); }
+    70% { clip: rect(53px, 9999px, 16px, 0); }
+    75% { clip: rect(63px, 9999px, 95px, 0); }
+    80% { clip: rect(33px, 9999px, 46px, 0); }
+    85% { clip: rect(67px, 9999px, 9px, 0); }
+    90% { clip: rect(36px, 9999px, 44px, 0); }
+    95% { clip: rect(80px, 9999px, 37px, 0); }
+    100% { clip: rect(18px, 9999px, 53px, 0); }
+  }
+  
+  @keyframes glitch-skew {
+    0% { transform: skew(0deg); }
+    10% { transform: skew(0deg); }
+    11% { transform: skew(5deg); }
+    12% { transform: skew(0deg); }
+    20% { transform: skew(0deg); }
+    21% { transform: skew(-5deg); }
+    22% { transform: skew(0deg); }
+    100% { transform: skew(0deg); }
+  }
+}
+
+/* Add these psychedelic animations to your CSS file */
+@keyframes hue-rotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 5px rgba(255,0,255,0.5); }
+  50% { box-shadow: 0 0 20px rgba(255,0,255,0.8); }
+  100% { box-shadow: 0 0 5px rgba(255,0,255,0.5); }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-5px, 5px); }
+  40% { transform: translate(-5px, -5px); }
+  60% { transform: translate(5px, 5px); }
+  80% { transform: translate(5px, -5px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-in {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-vibrate {
+  animation: vibrate 0.3s linear infinite;
+}
+
+.animate-glitch {
+  animation: glitch 1s linear infinite;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+.animate-hue-rotate {
+  animation: hue-rotate 10s linear infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s infinite;
+}
+
+/* Psychedelic hover effects */
+.hover-grow {
+  transition: all 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.hover-vibrate:hover {
+  animation: vibrate 0.3s linear infinite;
+}
+
+.hover-hue-rotate:hover {
+  animation: hue-rotate 2s linear infinite;
+}
+
+/* Psychedelic backgrounds */
+.bg-psychedelic-gradient {
+  background: linear-gradient(-45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradient-x 15s ease infinite;
+}
+
+.bg-trippy-grid {
+  background-image: linear-gradient(rgba(255,0,255,0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-trippy-glass {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
