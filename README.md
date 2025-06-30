@@ -90,3 +90,11 @@ anomoly-detector/
 - `frontend/`: React app source code and UI components.
 
 ---
+
+## Snapshots
+![image](https://github.com/user-attachments/assets/1a6165b3-cab9-48e4-85dc-7dcb48a1b906)
+![image](https://github.com/user-attachments/assets/c42f06cf-e9b0-4fbe-8f3b-e3b3fc59817a)
+![image](https://github.com/user-attachments/assets/d34cbda6-6b31-472b-b8e0-b00319cc59be)
+![image](https://github.com/user-attachments/assets/e3057923-a4a7-437e-aa03-4c8df7d34db5)
+![image](https://github.com/user-attachments/assets/cc256228-f820-4a46-b7f0-cb95c0f19b27)
+
